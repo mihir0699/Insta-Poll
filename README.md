@@ -34,7 +34,7 @@ Want to generate polls  instantly and want real-time results without a single re
 
  *1. Clone this repo by running the following command :-*
  bash
-  git clone hhttps://github.com/mihir0699/Insta-Poll
+  git clone https://github.com/mihir0699/Insta-Poll
   cd Insta-Poll
  
  
