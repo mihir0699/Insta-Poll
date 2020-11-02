@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Insta Poll 📊
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://foodeazy.herokuapp.com/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://foodeazy.herokuapp.com/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Want to generate polls  instantly and want real-time results without a single refresh, then <b>Insta Poll </b> is here to rescue.
 
-## Available Scripts
+*Project Link* - ***https://insta-poll-72ce3.web.app/***
 
-In the project directory, you can run:
 
-### `npm start`
+## Features and Functionalities 🔥
+- Generate Polls in a minute
+- Track the polls in real-time 📈
+- Set a auto expire timer ⌛
+- Share the poll on any social handle in just a click 🖱
+ 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ ## Screenshots
+ ### Home Page
+ ![enter image description here](https://raw.githubusercontent.com/mihir0699/Insta-Poll/master/images/Home%20Page.png?token=ALT5AMCLL7AQ2MARYDXEEMK7VETAY)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Poll Page
+![enter image description here](https://raw.githubusercontent.com/mihir0699/Insta-Poll/master/images/Poll.png?token=ALT5AMBPJ4B32MPU3TA4WFK7VETEI)
+## Tech Stack 💻
 
-### `npm run build`
+ - [React.js](https://reactjs.org/)
+ - [Firebase (Cloud Firestore)](https://firebase.google.com/)
+ - [Ant Design UI](https://ant.design/)
+ 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation :zap:
 
-### `npm run eject`
+ *1. Clone this repo by running the following command :-*
+ bash
+  git clone hhttps://github.com/mihir0699/Insta-Poll
+  cd Insta-Poll
+ 
+ 
+ *2. Now install all the required packages by running the following commands :-*
+ bash
+  npm install 
+ 
+ *3. Now start the react  by running the following command :-*
+ bash
+  npm start
+ 
+ *3. Create a `.env` file in the project root folder and copy the format of `.env.sample` file.*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   - `.env.sample` file contains all the environment variables required for running the project.
+   
+   
+ *4.* *🎉  Open your browser and go to  `https://localhost:3000`*
+ 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 
+ 
+## 🤩 Don't forget to give this repo a ⭐ if you like this repo and want to appreciate my efforts
+ 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
