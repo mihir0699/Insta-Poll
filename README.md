@@ -46,11 +46,8 @@ Want to generate polls  instantly and want real-time results without a single re
  bash
   npm start
  
- *3. Create a `.env` file in the project root folder and copy the format of `.env.sample` file.*
-
-   - `.env.sample` file contains all the environment variables required for running the project.
-   
-   
+ *3. Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credenitails.
+      
  *4.* *🎉  Open your browser and go to  `https://localhost:3000`*
  
 
