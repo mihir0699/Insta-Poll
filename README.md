@@ -1,5 +1,5 @@
 # Insta Poll 📊
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://foodeazy.herokuapp.com/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://foodeazy.herokuapp.com/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/mihir0699/Insta-Poll/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
 
 Want to generate polls  instantly and want real-time results without a single refresh, then <b>Insta Poll </b> is here to rescue.
 
@@ -33,20 +33,21 @@ Want to generate polls  instantly and want real-time results without a single re
 ## Installation :zap:
 
  *1. Clone this repo by running the following command :-*
- bash
+  ```bash
   git clone https://github.com/mihir0699/Insta-Poll
   cd Insta-Poll
- 
+  ```
  
  *2. Now install all the required packages by running the following commands :-*
- bash
+  ```bash
   npm install 
+   ```
  
  *3. Now start the react  by running the following command :-*
- bash
+  ```bash
   npm start
- 
- *3. Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credenitails.
+  ```
+- Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credenitails.
       
  *4.* *🎉  Open your browser and go to  `https://localhost:3000`*
  
