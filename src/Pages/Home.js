@@ -128,7 +128,7 @@ export const Home = (props) => {
     return (
         <div>
                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-               <a className="github-fork-ribbon right-top ribbon"  href="https://github.com/simonwhitaker/github-fork-ribbon-css" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+               <a className="github-fork-ribbon right-top ribbon"  href="https://github.com/mihir0699/Insta-Poll" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
                <h1 className="animate__animated animate__pulse heading">Create a Realtime Poll Instantly!⚡
                </h1>
                <ToastContainer newestOnTop autoClose={2000}/>
@@ -159,7 +159,7 @@ export const Home = (props) => {
         </div>
         <div style={{flexGrow:"1"}}>
         <img 
-               src="https://image.freepik.com/free-vector/costumer-survey-concept-illustration_114360-459.jpg"  className="home_img"/>
+               src="https://image.freepik.com/free-vector/costumer-survey-concept-illustration_114360-459.jpg"  className="home_img animate__animated animate__fadeIn"/>
         </div>
         </div>
         </MuiPickersUtilsProvider>

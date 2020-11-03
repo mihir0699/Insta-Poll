@@ -17,6 +17,10 @@
   .home_img {
     margin: auto;
   }
+  .not_img {
+    margin-top: 5rem;
+    height: 15rem;
+  }
 }
 
 @media screen and (max-width: 975px) {
@@ -24,8 +28,9 @@
     display: none;
   }
   .graph {
-    width: 80%;
+    width: 90%;
     height: 300px;
+    margin: auto;
   }
   .options_div {
     width: 100%;

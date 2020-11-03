@@ -80,6 +80,10 @@ const Poll = (props) => {
                 setPollData(y);
                 
             }
+            else
+            {
+              props.history.push("/not_found");
+            }
         })
     }, [])
 
@@ -199,15 +203,15 @@ return null
       <div className="share_icons animate__animated animate__fadeIn">
           <h3>Share this Poll <ShareAltOutlined /></h3>
         <TwitterShareButton
-            url={`http://localhost:3000/${poll.id}`}
-            title={`${poll.title} \n`}
+            url={`https://insta-poll-72ce3.web.app/${poll.id}`}
+            title={`Vote to this poll titled "${poll.title}"  generated using Insta Poll\n`}
             className="share_icon"
           >
             <TwitterIcon size={32} round />
           </TwitterShareButton>
           <WhatsappShareButton
-             url={`http://localhost:3000/${poll.id}`}
-             title={poll.title}
+             url={`https://insta-poll-72ce3.web.app/${poll.id}`}
+             title={`Vote to this poll titled "${poll.title}"  generated using Insta Poll`}
             separator=":: "
             className="share_icon"
   
@@ -215,15 +219,15 @@ return null
             <WhatsappIcon size={32} round  />
           </WhatsappShareButton>
           <FacebookShareButton
-            url={`http://localhost:3000/${poll.id}`}
-            title={poll.title}
+            url={`https://insta-poll-72ce3.web.app/${poll.id}`}
+            title={`Vote to this poll titled "${poll.title}"  generated using Insta Poll`}
             className="share_icon"
        
           >
             <FacebookIcon size={32} round />
           </FacebookShareButton>
           <br/>
-          <Input value={`http://localhost:3000/${poll.id}`} style={{width:"15rem"}} disabled/>
+          <Input value={`https://insta-poll-72ce3.web.app/${poll.id}`} style={{width:"15rem"}} disabled/>
           <Button type="primary" onClick={handleURL}>Copy URL</Button>
           <Button type="primary" onClick={showModal} style={{margin:"0.5rem"}}>
           Share QR Code
@@ -234,7 +238,7 @@ return null
           onCancel = {showModal}
                 style={{textAlign:"center"}}
         >
-            <QRCode value={`http://localhost:3000/${poll.id}`} style={{height:"12rem", width:"12rem"}}  />
+            <QRCode value={`https://insta-poll-72ce3.web.app/${poll.id}`} style={{height:"12rem", width:"12rem"}}  />
              </Modal>
           </div>
         </div>
