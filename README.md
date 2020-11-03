@@ -47,7 +47,7 @@ Want to generate polls  instantly and want real-time results without a single re
   ```bash
   npm start
   ```
-- Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credenitails.
+- Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credentials.
       
  *4.* *🎉  Open your browser and go to  `https://localhost:3000`*
  
