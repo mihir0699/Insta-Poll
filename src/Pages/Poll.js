@@ -19,7 +19,7 @@ const Poll = (props) => {
     const [pollData, setPollData] = useState([]);
     const [index, setIndex] = useState(-1);
     const handleURL = ()=>{
-        navigator.clipboard.writeText("http://localhost:3000/" + poll.id);
+        navigator.clipboard.writeText("https://insta-poll-72ce3.web.app/" + poll.id);
         toast.success("URL copied to clipboard")
     }
     const showModal = () => {
