@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import { Home } from './Pages/Home';
 import Poll from './Pages/Poll';
 import Not_found from './Pages/Not_found';
+import Footer from './Pages/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       
         <Route path="*" exact={true} component={Not_found} />
       </Switch>
+      <Footer />
     </Router>
     </div>
   );

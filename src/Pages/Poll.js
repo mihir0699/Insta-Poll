@@ -158,12 +158,13 @@ if(!poll)
 return null
     return (
         <div>
-                <h1 className="head_title animate__animated animate__fadeIn">{poll.title} <Link to="/"><Button type="primary" className="create_btn" >Create a new Poll</Button></Link></h1>
-               
+                <h1 className="head_title animate__animated animate__fadeIn">{poll.title} </h1>
+                <Link to="/"><Button type="primary" className="create_btn" >Create a new Poll</Button></Link>
+                <br/>
                 <ToastContainer newestOnTop autoClose={2000}/>
              <div className="flex">
              <div className="options_div animate__animated animate__fadeInLeft">
-         {expiry ? (<h2>This poll is no longer accepting responses ❌</h2>) : (<h2>Select an Option</h2>)}       
+         {expiry ? (<h2>This poll is no longer accepting responses ❌</h2>) : (<h2>Select an Option 👇</h2>)}       
                 {expiry ? (poll.options.map((option)=>{
                            if(option.index!=index)
                   return (

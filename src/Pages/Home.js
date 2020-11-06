@@ -12,11 +12,13 @@ import {
     MuiPickersUtilsProvider,
     KeyboardTimePicker,
   } from '@material-ui/pickers';
-import "animate.css";
+import "animate.css"
+import "../App.css"
 import {createPoll} from "../firebase/polls"
 
 export const Home = (props) => {
     const { Title } = Typography;
+    const { TextArea } = Input;
     const [check, setCheck]= useState(false);
 
     const [options, setOptions] = useState([{
@@ -115,6 +117,7 @@ export const Home = (props) => {
         setOptions([...options, option]);
 
     }
+    
     const handleChange = (index, e)=>{
         let x = options;
         x.forEach((option)=>{
@@ -134,7 +137,7 @@ export const Home = (props) => {
                <ToastContainer newestOnTop autoClose={2000}/>
                <div className="flex_home">
                    <div style={{flexGrow:"2"}} className="min_wide">
-               <input type="text" placeholder="Poll Title" className="title" onChange={handleTitle} />
+               <TextArea   placeholder="Ask a Question..." className="title" onChange={handleTitle} autoSize={{minRows:1.5}}/>
                <br/>
                <br/>
                <div className="flex_btns">
