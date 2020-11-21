@@ -4,14 +4,20 @@ import { HorizontalBar , Pie, Bar} from 'react-chartjs-2';
 import { Typography, Input, Button, Switch, Modal } from 'antd';
 import {updatePoll} from "../firebase/polls"
 import {Link} from "react-router-dom"
-import { ShareAltOutlined } from '@ant-design/icons'
+import { ShareAltOutlined , LogoutOutlined} from '@ant-design/icons'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 import QRCode from 'qrcode.react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Loader from '../Loader.gif';
 import {TwitterIcon, TwitterShareButton, WhatsappShareButton, WhatsappIcon, FacebookIcon, FacebookShareButton} from "react-share";
+import { UserSession } from '../firebase/UserProvider';
 
 const Poll = (props) => {
     const id = props.match.params.id;
+    const {user} = UserSession();
+    const uid = user.uid;
     const [label, setLabel] = useState([]);
     const [expiry, setExpiry] = useState(false);
     const [poll, setPoll] = useState(null);
@@ -27,36 +33,41 @@ const Poll = (props) => {
       };
     const handleClick = (index)=>{
         setIndex(index);
-        if(localStorage.getItem(poll.id))
-        {
-            if(localStorage.getItem(poll.id)!=index)
-            {
-                let old = localStorage.getItem(poll.id);
-                let x = poll;
-                x.options.forEach((option)=>{
-                    if(option.index==index)
-                    option.count +=1;
-                    else if(option.index ==old)
-                    option.count -=1;
-                })
-                localStorage.setItem(poll.id, index);
-                updatePoll(x);
-            }
-            
-        }
-        else{
-            let x = poll;
-                x.options.forEach((option)=>{
-                    if(option.index==index)
-                    option.count +=1;
-                })
-                localStorage.setItem(poll.id, index);
-                updatePoll(x);
-        }
+      let x = poll;
+      if(!x.votes[uid])
+      {
+        x.options.forEach((option)=>{
+          if(option.index==index)
+          option.count +=1;
+      })
+      }
+      else if(x.votes[uid]!=index)
+      {
+        x.options.forEach((option)=>{
+          if(option.index==(x.votes[uid]))
+          {
+            option.count-=1;
+          }
+          else if(option.index==index)
+          {
+            option.count+=1;
+          }
+        })
+      }
+          
+          x.votes[uid] = index;
+          updatePoll(x);
+        
         
    
 
     }
+    const handleLogout  = ()=>{
+      firebase.auth().signOut().then(function() {
+        }).catch(function(error) {
+         
+        });
+  }
    useEffect(()=>{
        const docRef =  firestore.doc(`/polls/${id}`);
         const unsubscribe = docRef.onSnapshot((document)=>{
@@ -72,9 +83,9 @@ const Poll = (props) => {
                     x.push(option.title);
                     y.push(option.count)
                 })
-                if(localStorage.getItem(document.data().id))
+                if(document.data().votes && document.data().votes[uid])
                 {
-                    setIndex(localStorage.getItem(document.data().id));
+                    setIndex(document.data().votes[uid]);
                 }
                 setLabel(x);
                 setPollData(y);
@@ -155,10 +166,28 @@ const Poll = (props) => {
     }
 
 if(!poll)
-return null
+return( <div
+style={{
+  width: "100%",
+  display: "flex",
+  height: "100vh",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: "23444898429"
+}}
+>
+<img src={Loader} />
+</div>)
     return (
         <div>
+          <div className="logout_grid">
+            <div>
                 <h1 className="head_title animate__animated animate__fadeIn">{poll.title} </h1>
+                </div>
+                <div>
+                <Button type="primary" onClick={handleLogout} className="btn_logout"> Logout <LogoutOutlined /></Button>
+                </div>
+                </div>
                 <Link to="/"><Button type="primary" className="create_btn" >Create a new Poll</Button></Link>
                 <br/>
                 <ToastContainer newestOnTop autoClose={2000}/>
@@ -196,10 +225,10 @@ return null
                    
                 ))}
              </div>
-
-             <div className="graph animate__animated animate__fadeInRight">
+{index!=-1 && ( <div className="graph animate__animated animate__fadeInRight">
              <HorizontalBar data={data}  options={options} />
-        </div>
+        </div>)}
+            
             </div>
       <div className="share_icons animate__animated animate__fadeIn">
           <h3>Share this Poll <ShareAltOutlined /></h3>

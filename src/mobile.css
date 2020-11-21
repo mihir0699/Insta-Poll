@@ -1,7 +1,10 @@
 @media screen and (max-width: 1050px) {
   .heading {
-    margin: auto;
-    margin-right: 0;
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+  }
+  .heading1 {
+    font-size: 1.6rem;
   }
 
   .switch_div {
@@ -17,6 +20,17 @@
   .not_img {
     margin-top: 5rem;
     height: 15rem;
+  }
+  .google_head {
+    margin-top: 2rem;
+  }
+  .home_img1 {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .logout_grid {
+    display: grid;
+    grid-template-columns: 70% 15%;
   }
 }
 
@@ -35,10 +49,7 @@
   .title {
     font-size: 1rem !important;
   }
-  .heading {
-    font-size: 1.8rem;
-    margin: 0.25rem;
-  }
+
   .not_found {
     margin-bottom: 23rem;
   }

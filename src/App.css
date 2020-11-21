@@ -29,10 +29,17 @@
 }
 
 .heading {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   color: #174dce;
   text-shadow: 2px 2px #17a1ce;
   margin-right: 30rem;
+}
+
+.heading1 {
+  font-size: 2.6rem;
+  color: #174dce;
+  text-shadow: 2px 2px #17a1ce;
+  text-align: center;
 }
 
 .title {
@@ -121,6 +128,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 2.5rem;
+  justify-content: center;
 }
 
 .options_div {
@@ -132,6 +140,7 @@
   margin-bottom: 1.3rem;
   font-family: Mulish;
   font-weight: 600;
+  margin: 0.5rem;
 }
 .home_img {
   height: 25rem;
@@ -140,11 +149,18 @@
   max-width: 400px;
   min-width: 400px;
 }
+.home_img1 {
+  height: 25rem;
+  margin: 1rem auto;
+  margin-right: 2rem;
+  max-width: 600px;
+  min-width: 400px;
+}
 
 .flex_home {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .share_icons {
@@ -157,6 +173,9 @@
 }
 
 .min_wide {
+  min-width: 600px;
+}
+.min_wide1 {
   min-width: 600px;
 }
 
@@ -207,6 +226,7 @@
 .create_btn {
   float: right;
   margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .not_img {
@@ -229,4 +249,39 @@
 
 .not_found {
   margin-bottom: 7rem;
+}
+
+.google_image {
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.user_name {
+  font-size: 1rem;
+  font-family: Mulish;
+  font-weight: 570;
+  padding: 1rem;
+}
+.auth_div > button {
+  margin: 1rem;
+}
+
+.logout_grid {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.btn_logout {
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+.google_head {
+  margin-top: 10rem;
+  font-family: Mulish;
+  margin-bottom: 1rem;
+}
+
+.login_btn {
+  width: 18rem;
+  height: 30rem;
 }

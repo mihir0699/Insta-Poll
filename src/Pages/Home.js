@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { Typography, Input, Button, Switch } from 'antd';
-import { DeleteTwoTone, PlusCircleTwoTone} from '@ant-design/icons'
+import { DeleteTwoTone, PlusCircleTwoTone, LogoutOutlined} from '@ant-design/icons'
 import DateFnsUtils from "@date-io/date-fns"; 
 import "../mobile.css"
 import { ToastContainer, toast } from 'react-toastify';
 import shortid from "shortid";
+import firebase from 'firebase/app'
+import 'firebase/auth'
 import 'react-toastify/dist/ReactToastify.css';
 import 'antd/dist/antd.css';
 import {
@@ -14,10 +16,18 @@ import {
   } from '@material-ui/pickers';
 import "animate.css"
 import "../App.css"
-import {createPoll} from "../firebase/polls"
+import {createPoll} from "../firebase/polls";
+import {UserSession} from '../firebase/UserProvider'
 
 export const Home = (props) => {
     const { Title } = Typography;
+    const {user} = UserSession();
+    const handleLogout  = ()=>{
+        firebase.auth().signOut().then(function() {
+          }).catch(function(error) {
+           
+          });
+    }
     const { TextArea } = Input;
     const [check, setCheck]= useState(false);
 
@@ -67,6 +77,8 @@ export const Home = (props) => {
                   poll.expire = false;
                   poll.id = shortid.generate();
                   poll.title = title;
+                  poll.creator = user.displayName;
+                  poll.votes = {};
                   poll.options = options;
                   createPoll(poll);
                   toast.success("Poll Generated Successfully 🎉");
@@ -131,9 +143,15 @@ export const Home = (props) => {
     return (
         <div>
                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-               <a className="github-fork-ribbon right-top ribbon"  href="https://github.com/mihir0699/Insta-Poll" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+            <div className="logout_grid">
+                <div>
                <h1 className="animate__animated animate__pulse heading">Create a Realtime Poll Instantly!⚡
                </h1>
+               </div>
+               <div>
+               <Button type="primary" onClick={handleLogout} size="large" className="btn_logout"> Logout <LogoutOutlined /></Button>
+               </div>
+               </div>
                <ToastContainer newestOnTop autoClose={2000}/>
                <div className="flex_home">
                    <div style={{flexGrow:"2"}} className="min_wide">
