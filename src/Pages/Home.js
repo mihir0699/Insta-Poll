@@ -8,6 +8,7 @@ import shortid from "shortid";
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'react-toastify/dist/ReactToastify.css';
+import {motion, AnimatePresence} from "framer-motion";
 import 'antd/dist/antd.css';
 import {
     DateTimePicker,
@@ -91,6 +92,16 @@ export const Home = (props) => {
 
         }
     }
+    const fadeEffect = {
+        exit : {
+            opacity:0,
+            x:-300,
+            transition:{
+            
+                duration:5
+            }
+        }
+    }
     const handleTitle = (e)=>{
         setTitle(e.target.value)
     }
@@ -170,12 +181,16 @@ export const Home = (props) => {
                {check ? (<DateTimePicker value={selectedDate} disablePast onChange={handleDateChange}/>) : (null)}
                
                </div>
+               <AnimatePresence>
                {!options.length ? (null) : (options.map((option)=>(
-                    <div className="options animate__animated animate__fadeInDown">
+               
+                    <motion.div  exit={{x:-800}} initial={{y:-30, opacity:0}} animate={{opacity:1, y:0, transition: {y:{duration:0.5}}}} key={option.index} className="options">
                     <input type="text" placeholder ={`Option ${option.index}`}  className="option" value={option.title} onChange={(value)=>handleChange(option.index, value)} />
                     <DeleteTwoTone twoToneColor="#eb2f96" style={{fontSize:"1.2rem"}} onClick={()=>{handleDelete(option.index)}}/>
-                    </div>
+                    </motion.div>
+             
                )))}
+                      </AnimatePresence>
         {!options.length ? (null) : (<Button type="primary" size="large" className="submit" onClick={handleSubmit}> Generate Poll 🚀</Button>)}
         </div>
         <div style={{flexGrow:"1"}}>
