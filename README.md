@@ -1,5 +1,5 @@
 # Insta Poll 📊
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/mihir0699/Insta-Poll/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://github.com/mihir0699/Insta-Poll/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Build passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg?style=flat-square)](https://foodeazy.herokuapp.com/)&nbsp;[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://foodeazy.herokuapp.com/)&nbsp;[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://foodeazy.herokuapp.com/)&nbsp;![Made with Love in India](https://madewithlove.org.in/badge.svg)
 
 Want to generate polls  instantly and want real-time results without a single refresh, then <b>Insta Poll </b> is here to rescue.
 
@@ -7,9 +7,10 @@ Want to generate polls  instantly and want real-time results without a single re
 
 
 ## Features and Functionalities 🔥
+- Login in instantly using Google Auth 
 - Generate Polls in a minute
 - Track the polls in real-time 📈
-- Set a auto expire timer ⌛
+- Set an auto expire timer ⌛
 - Share the poll on any social handle in just a click 🖱
  
 
@@ -24,7 +25,7 @@ Want to generate polls  instantly and want real-time results without a single re
 ## Tech Stack 💻
 
  - [React.js](https://reactjs.org/)
- - [Firebase (Cloud Firestore)](https://firebase.google.com/)
+ - [Firebase (Cloud Firestore, Firebase Auth, Firebase hosting)](https://firebase.google.com/)
  - [Ant Design UI](https://ant.design/)
  
 
@@ -47,7 +48,7 @@ Want to generate polls  instantly and want real-time results without a single re
   ```bash
   npm start
   ```
-- Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credentials.
+- Create a `firebaseConfig.js` file in the project src folder and paste your firebase config credenitails.
       
  *4.* *🎉  Open your browser and go to  `https://localhost:3000`*
  
