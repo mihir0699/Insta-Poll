@@ -5,6 +5,8 @@ Want to generate polls  instantly and want real-time results without a single re
 
 *Project Link* - ***https://insta-poll-72ce3.web.app/***
 
+*Demo Video* - ***https://youtu.be/kW7Gzwbn2yk***
+
 
 ## Features and Functionalities 🔥
 - Login in instantly using Google Auth 
